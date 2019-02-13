@@ -108,3 +108,13 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+
+/dist
+
+/tests/e2e/reports/
+
+# local env files
+.env.local
+.env.*.local
+
+*.sw*
