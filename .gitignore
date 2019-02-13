@@ -97,4 +97,6 @@ typings/
 out
 gen
 
-*.css
+dist/*.css
+dist/*.js
+
