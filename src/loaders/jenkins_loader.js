@@ -1,9 +1,12 @@
 import jenkins from 'jenkins';
 
-const jenkinsMgr = jenkins({ baseUrl: process.env.JENKINS_BASE_URL, crumbIssuer: process.env.JENKINS_CRUMB_ENABLED });
-
-jenkinsMgr.info((info) => {
-  console.log(info);
-});
-
-module.exports = jenkinsMgr;
+export default (config) => {
+  const jenkinsMgr = jenkins({ baseUrl: config.jenkins_url, crumbIssuer: config.crumb_enabled, headers: { 'Access-Control-Allow-Origin': '*' } });
+  jenkinsMgr.info((err, data) => {
+    if (err) {
+      console.error(err);
+    }
+    console.log(data);
+  });
+  return jenkinsMgr;
+};
