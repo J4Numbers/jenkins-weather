@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "dotenv_config_path=config/development.env vue-cli-service serve -r dotenv/config",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "dotenv": "^6.2.0",
     "jenkins": "^0.23.0",
     "vue": "^2.5.22",
     "vue-router": "^3.0.1"
