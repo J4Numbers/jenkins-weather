@@ -1,4 +1,4 @@
-module.exports = {
-  jenkins_url: 'http://user:password@localhost:8080',
-  crumb_enabled: false
+export default {
+  jenkins_url: 'http://localhost:8080',
+  crumb_enabled: true
 };
