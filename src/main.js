@@ -1,8 +1,10 @@
-import './loaders/load_env';
-import './loaders/jenkins_loader';
+import config from './loaders/load_env';
+import jenkinsLoader from './loaders/jenkins_loader';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
+
+jenkinsLoader(config);
 
 Vue.config.productionTip = false;
 
